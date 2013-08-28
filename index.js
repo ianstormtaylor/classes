@@ -30,7 +30,7 @@ function mixin (obj) {
  */
 
 exports.addClass = function (name) {
-  classes(this.el).add(name);
+  classes.add(name, this.el);
   return this;
 };
 
@@ -43,7 +43,7 @@ exports.addClass = function (name) {
  */
 
 exports.removeClass = function (name) {
-  classes(this.el).remove(name);
+  classes.remove(name, this.el);
   return this;
 };
 
@@ -56,7 +56,7 @@ exports.removeClass = function (name) {
  */
 
 exports.hasClass = function (name) {
-  return classes(this.el).has(name);
+  return classes.has(name, this.el);
 };
 
 
@@ -68,6 +68,6 @@ exports.hasClass = function (name) {
  */
 
 exports.toggleClass = function (name) {
-  classes(this.el).toggle(name);
+  classes.toggle(name, this.el);
   return this;
 };
